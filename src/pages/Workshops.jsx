@@ -1,4 +1,4 @@
-import {getWorkshops} from "../api";
+import {getWorkshops} from "../api.js";
 
 export default function Workshops() {
     const workshops = getWorkshops();
