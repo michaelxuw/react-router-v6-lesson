@@ -8,7 +8,12 @@ export default function Register() {
     const lnameRef = useRef(null);
 
     const toConfirmation = () => {
-        navigate("/confirmed",{state:{email: emailRef, fname: fnameRef, lname: lnameRef}})
+        const user = {
+            email: emailRef.current.value,
+            fname: fnameRef.current.value,
+            lname: lnameRef.current.value,
+        }
+        navigate("/confirmed",{state:{user}})
     }
 
     function handleSubmit(event) {
