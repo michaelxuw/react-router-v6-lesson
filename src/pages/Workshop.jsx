@@ -1,4 +1,8 @@
-export default function Workshop() {
+import {useParams} from "react-router-dom";
+
+
+export default function Workshop(props) {
+    const{workshopId} = useParams()
 
     return (
         <>
