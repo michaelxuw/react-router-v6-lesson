@@ -11,12 +11,9 @@ export default function Workshops() {
                 {workshops.map(work => (
                     <li key={work.id}>
                         <NavLink
-                            className={({ isActive }) =>
-                                isActive ? "workshop-active" : null
-                            }
-                            to={work.id}
-                        >
-                            {work.name}
+                            className={({ isActive }) => isActive ? "workshop-active" : null}
+                            to={work.id}>
+                                {work.name}
                         </NavLink>
                     </li>
                 ))}
