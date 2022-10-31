@@ -1,4 +1,4 @@
-import {getWorkshops} from "../api";
+import {getWorkshops} from "../api.js";
 import {Link, Outlet} from "react-router-dom";
 
 export default function Workshops() {
