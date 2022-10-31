@@ -8,6 +8,8 @@ import Header from "./components/Header";
 import About from "./components/About.jsx";
 import Workshop from "./components/Workshop";
 import Session from "./components/Session.jsx";
+import Register from "./components/Register";
+import Confirmation from "./components/Confirmation";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
@@ -21,8 +23,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         <Route path=":workId" element={<Workshop/>}>
                             <Route path=":sessionId" element={<Session/>}/>
                         </Route>
-                    {/*  insert here   */}
+                    <Route index element={<h3>Select a workshop from above</h3>}/>
                     </Route>
+                    <Route path="register" element={<Register/>}/>
+                    <Route path="confirmation" element={<Confirmation/>}/>
                     <Route path="*" element={<h1 className="not-found">Page Not Found</h1>}/>
                 </Routes>
 

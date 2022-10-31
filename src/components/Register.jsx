@@ -3,9 +3,11 @@ import {useNavigate} from "react-router-dom"
 
 export default function Register() {
     const emailRef = useRef(null);
+    const navigate = useNavigate()
 
     function handleSubmit(event) {
         event.preventDefault();
+        navigate("/confirmation")
     }
 
     return (
