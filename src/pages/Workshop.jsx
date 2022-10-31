@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {getWorkshop} from "../api.js";
 
 export default function Workshop(props) {
@@ -9,10 +9,12 @@ export default function Workshop(props) {
         <>
             <h2>{workshop.name}</h2>
             <ul className="session-list">
-                {workshop.sessions.map(work =>
-                    <li key={work.name} className="container">
-                        <p className="session-name">{work.name}</p>
-                        <p>{work.speaker.name}|{work.speaker.org}</p>
+                {workshop.sessions.map(session =>
+                    <li className="session" key={session.id}>
+                        <Link to={session.id}>
+                            <p className="session-name">{session.name}</p>
+                            <p>{session.speaker.name} | {session.speaker.org}</p>
+                        </Link>
                     </li>
                 )}
             </ul>
