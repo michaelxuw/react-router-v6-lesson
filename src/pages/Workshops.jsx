@@ -9,7 +9,7 @@ export default function Workshops({ title }) {
       <h1>{title}</h1>
       <p>{workshops.map(workshop=>
         <ul>
-          <li>{workshop.id}</li>
+          <li key={workshop.id}>{workshop.id}</li>
           <li>{workshop.name}</li>
         </ul>
       )}</p>
